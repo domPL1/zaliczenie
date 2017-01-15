@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FXMLDocumentController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="320.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menu1_1" mnemonicParsing="false" onAction="#newFile" text="New" />
+                  <MenuItem fx:id="menu1_2" mnemonicParsing="false" onAction="#openFile" text="Open" />
+                  <MenuItem fx:id="menu1_3" disable="true" mnemonicParsing="false" onAction="#saveFile" text="Save" />
+                  <MenuItem fx:id="menu1_4" mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="menu2_1" disable="true" mnemonicParsing="false" onAction="#createEntry" text="Create" />
+                  <MenuItem fx:id="menu2_2" disable="true" mnemonicParsing="false" onAction="#deleteEntry" text="Delete" />
+                  <MenuItem fx:id="menu2_3" disable="true" mnemonicParsing="false" onAction="#modifyEntry" text="Modify" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="SQL">
+            <items>
+              <MenuItem fx:id="menu3_1" disable="true" mnemonicParsing="false" onAction="#importSQL" text="Import" />
+                  <MenuItem fx:id="menu3_2" disable="true" mnemonicParsing="false" onAction="#exportSQL" text="Export" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="tab" layoutY="27.0" prefHeight="200.0" prefWidth="320.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+        <tabs>
+          <Tab text="Adresses">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="textAera1" prefHeight="174.0" prefWidth="320.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="textField2" text="Contacts">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="textAera2" prefHeight="171.0" prefWidth="320.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
